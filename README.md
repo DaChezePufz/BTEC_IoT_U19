@@ -13,9 +13,19 @@ Files and documentation for the BTEC Unit 19 IoT practical
 
 *To be added later by Keiran*
 
-## Step 4: The Python Script
+## Step 4: Creating the GMail account
 
-### 4.2: Writing the script on a PC
+The first step is to create a new GMAil account.
+
+Once you have created this, go to the >Manage your account< Option
+
+Then, go to the security tab, where we will have to enable 2FA/ 2 Step Verification.
+
+Select 2-Step verification, then scroll down to App Passwords. Create a new one and keep track of the 16 digit password. If you loose this, delete the previous one and create a new one. You will use this later.
+
+## Step 5: The Python Script
+
+### 5.1: Writing the script on a PC
 
 Firstly, we need to import all the required libaries.
 
