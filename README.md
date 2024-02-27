@@ -69,6 +69,7 @@ Using Balena Etcher, flash the image to the MicroSD card
 When booting up, you will be presented with the login screen, use the following credentials:
 
 > User: radxa
+> 
 > Pass: radxa
 
 Next, open up Terminal with 
