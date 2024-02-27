@@ -70,6 +70,8 @@ Open up a terminal window and run the following command,
 
     sudo apt install motion
 
+*Note, you may have to press enter if there is a prompt about using up disk space*
+
 ## Step 6: Copying program over to RockPi
 
 Once you have written and tested the program on your PC, you should place it on an empty usb stick and transfer it to the RockPi.
@@ -81,7 +83,6 @@ Open up a terminal window and type
 You should see a singlar device listed, then type
 
     cd /mnt/*device*
-
     ls
 
 You should see the Python program saved, as
@@ -90,8 +91,24 @@ You should see the Python program saved, as
 
 You will then want to run the following command
 
-    cp sendEmail.py /etc/lib/motion/sendEmail.py
+    cp sendEmail.py /etc/motion/sendEmail.py
 
 This will copy the python program to the Rock.
 
 ## Step 7: Editing the Motion Config File
+
+In a terminal window
+
+    nano /etc/motion/motion.conf
+
+Set Line 103 to
+
+    on_event_end "python /etc/motion/sendEmail.py"
+
+Set line 113 to
+
+    picture_output on
+
+Set line 123 to
+
+    movie_output off
