@@ -58,11 +58,22 @@ Now we just have to so some SSL and SMTO stuff to send the E-Mail
 
 ## Step 3: Image the MicroSD Card
 
-*To be added later by Jacob*
+Retreive the image from the USB
+
+> rock-4c-plus_debian_bullseye_kde_b60.img.xz
+
+Using Balena Etcher, flash the image to the MicroSD card
 
 ## Step 4: Install and set up the OS
 
-*To be added later by Jacob*
+When booting up, you will be presented with the login screen, use the following credentials:
+
+> User: radxa
+> Pass: radxa
+
+Next, open up Terminal with 
+
+> Ctrl + Alt + T
 
 ## Step 5: Install Motion v4.3.2
 
