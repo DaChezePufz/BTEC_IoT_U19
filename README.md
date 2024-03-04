@@ -69,10 +69,9 @@ Using Balena Etcher, flash the image to the MicroSD card
 When booting up, you will be presented with the login screen, use the following credentials:
 
 > User: radxa
-> 
 > Pass: radxa
 
-Next, open up Terminal with 
+Next, open up Terminal with:
 
 > Ctrl + Alt + T
 
@@ -80,7 +79,9 @@ Next, open up Terminal with
 
 Open up a terminal window and run the following command,
 
-    sudo apt install motion
+    sudo apt-get update
+
+    sudo apt-get install motion
 
 *Note, you may have to press enter if there is a prompt about using up disk space*
 
@@ -124,3 +125,13 @@ Set line 113 to
 Set line 123 to
 
     movie_output off
+
+## Step 8: Finalising
+
+You will then have to run Motion with the following command:
+
+    sudo motion
+
+You can then go to "localhost:8080" in a web browser to check that the service is running and the camera has been detected.
+
+Once you have completed all the previous steps you should be able to then check your emails and it should all be working.
