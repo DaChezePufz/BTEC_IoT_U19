@@ -118,9 +118,15 @@ Set Line 103 to
 
     on_event_end "python /etc/motion/sendEmail.py"
 
+*Note, the default keyboard layout is American English, so the '@' and '"' keys will be swapped around.*
+
 Set line 113 to
 
     picture_output on
+
+Set line 116 to
+
+    picture_filename snapshot
 
 Set line 123 to
 
