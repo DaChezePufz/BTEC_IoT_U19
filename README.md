@@ -42,7 +42,12 @@ We need to then attach this text to the message, as we're later attaching an ima
 
 Now, we need to open, read and attach the image
 
-    with open("\var\lib\motion\snapshot.jpg", "rb") as f:
+    if os.name == "nt":
+        picPath = "snapshot.jpg"
+    else:
+        picPath = /var/lib/motion/snapshot.jpg"
+    
+    with open("picPath, "rb") as f:
         img_data = f.read()
 
     image = MIMEImage(img_data, name=os.path.basename("snapshot.jpg"))
@@ -89,13 +94,17 @@ Open up a terminal window and run the following command,
 
 Once you have written and tested the program on your PC, you should place it on an empty usb stick and transfer it to the RockPi.
 
+You may need to mount the USB before you can access its contents, so if when plugging in a box appears in the bottom left of your screen, click on it and click the mount button next to the USB.
+
 Open up a terminal window and type
 
-    ls /mnt
+    'ls /mnt
+    ls /media/radxa/
 
-You should see a singlar device listed, then type
+You should see a singlar device listed, probably named "USB" then type
 
-    cd /mnt/*device*
+    'cd /mnt/*device*
+    cd /media/radxa/USB/
     ls
 
 You should see the Python program saved, as
@@ -105,6 +114,10 @@ You should see the Python program saved, as
 You will then want to run the following command
 
     cp sendEmail.py /etc/motion/sendEmail.py
+
+*If you receive an error along the lines of: "cp: cannot create regular file '/etc/motion/sendEmail.py': Permission denied"; append sudo to the beginning:
+
+    sudo cp sendEmail.py /etc/motion/sendEmail.py
 
 This will copy the python program to the Rock.
 
