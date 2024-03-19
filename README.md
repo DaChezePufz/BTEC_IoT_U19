@@ -30,6 +30,13 @@ We also need to define the recipients E-Mail address.
 
     recipient_email_address = "student_number@student.bcot.ac.uk"
 
+We need to define some MIME stuff:
+
+    message = MIMEMultipart()
+    message["Subject"] = "Motion has been detected"
+    message["From"] = email_address
+    message["To"] = recipient_email_address
+
 Next, we have to set up the text of the email
 
     message_text = MIMEText("""\
@@ -45,7 +52,7 @@ Now, we need to open, read and attach the image
     if os.name == "nt":
         picPath = "snapshot.jpg"
     else:
-        picPath = /var/lib/motion/snapshot.jpg"
+        picPath = "/var/lib/motion/snapshot.jpg"
     
     with open("picPath, "rb") as f:
         img_data = f.read()
